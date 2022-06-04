@@ -1,0 +1,26 @@
+.minimized-navbar {
+    width: 70px !important;
+}
+
+.normal-navbar {
+    width: 230px !important;
+}
+
+nav {
+    a {
+        color: #e7e7e7;
+        background-color: none;
+
+        &:hover {
+            color: white;
+        }
+
+        &.active {
+            color: #266d9d;
+            background-color: #d9dee4;
+            border-right: 5px solid #f05f40;
+        }
+
+    }
+
+}

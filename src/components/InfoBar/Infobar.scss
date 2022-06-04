@@ -1,0 +1,21 @@
+#infobar {
+    background-color: #ededed;
+    border-bottom: 1px solid #d9dee4;
+    color: black;
+
+    img {
+        width: 29px;
+        height: 29px;
+    }
+
+    button {
+        color: #515356;
+        border-radius: 0;
+
+        &:hover {
+            background: #d9dee4;
+            color: #f05f40;
+        }
+    }
+
+}

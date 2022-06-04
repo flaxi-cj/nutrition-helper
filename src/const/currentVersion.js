@@ -1,0 +1,1 @@
+export const CURRENT_VERSION = 'v. a-0.0.1';

@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import "./InfoBar.scss";
-import {userImage} from "../../assets/images/userImage.png";
+import {userImage} from "../../assets/assetIndex";
 import { Tooltip } from "../../assets/assetIndex";
 
 

@@ -3,7 +3,7 @@ const MainLayout = () => {
 
   return (
     <>
-      <main style={{backgroundColor:'#266d9d'}}>
+      <main style={{backgroundColor:'#ab7878'}}>
         <Outlet />
       </main>
     </>

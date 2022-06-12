@@ -9,7 +9,7 @@ const CalculatorLayout = () => {
 
   return (
 
-    <div id='calculatorContainer' className='container-fluid' style={{ backgroundColor: "#266d9d" }}>
+    <div id='calculatorContainer' className='container-fluid' style={{ backgroundColor: "#ab7878" }}>
       <div className='row align-items-start'>
 
         <Navbar isExpanded={isExpanded} setIsExpanded={setIsExpanded} />

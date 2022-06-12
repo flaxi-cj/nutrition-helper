@@ -25,7 +25,7 @@ const Navbar = ({ isExpanded, setIsExpanded }) => {
         <nav className={isLargeScreen ? largeScreenSizeClass : smallScreenSizeClass}>
 
             <Link to="/" className={`text-decoration-none text-white d-flex align-items-center pt-2 pb-4${(isExpanded && isLargeScreen) ? ' ps-3' : ' align-self-center h5 mb-4'}`}>
-                <i className='fa-solid fa-heart-pulse m-0 pt-2 me-1' style={isExpanded ? { fontSize: '1.35em' } : { fontSize: '27px', paddingRight: '5px' }}></i>
+                <i className='fa-solid fa-bowl-food m-0 pt-2 me-1' style={isExpanded ? { fontSize: '1.35em' } : { fontSize: '27px', paddingRight: '5px' }}></i>
                 <p className={`${(isExpanded && isLargeScreen) ? '' : 'd-none '}fw-normal m-0 ps-2 pt-1`} style={{ color: '#ecf0f1', fontSize: '23px' }}>nutrition helper</p>
             </Link>
 

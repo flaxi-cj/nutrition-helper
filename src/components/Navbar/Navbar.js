@@ -29,8 +29,6 @@ const Navbar = ({ isExpanded, setIsExpanded }) => {
                 <p className={`${(isExpanded && isLargeScreen) ? '' : 'd-none '}fw-normal m-0 ps-2 pt-1`} style={{ color: '#ecf0f1', fontSize: '23px' }}>nutrition helper</p>
             </Link>
 
-            <p className={`${(isExpanded && isLargeScreen) ? '' : 'd-none '}text-white fs-8 fw-bold ps-3 pt-2`} style={{letterSpacing:'0.5px'}}>MENU</p>
-
             <div className='d-flex flex-column align-items-stretch'>
                 {
                     AppRoutes.map(item => {

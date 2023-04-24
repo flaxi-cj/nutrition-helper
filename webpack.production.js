@@ -1,12 +1,16 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
+    optimization: {
+        minimize: true,
+        minimizer: [new TerserPlugin()],
+      },
     entry: path.join(__dirname, "src", "index.js"),
-    mode: 'development',
-    devtool: 'inline-source-map',
+    mode: 'production',
     output: {
-        path: path.resolve(__dirname, "dist"),
+        path: path.resolve(__dirname, "build"),
         filename: 'index.js',
         publicPath: '/',
         assetModuleFilename: 'images/[name][ext]'
@@ -66,12 +70,6 @@ module.exports = {
                 type: 'asset/resource'
             },
         ]
-    },
-    //To be tested routing and refresh solutions as seen here:
-    //https://stackoverflow.com/questions/56919473/react-webpack-cant-redirect-all-my-routes-to-index-html
-    //https://stackoverflow.com/questions/27928372/react-router-urls-dont-work-when-refreshing-or-writing-manually
-    devServer: {
-        historyApiFallback: true
     },
     plugins: [
         new HtmlWebpackPlugin({

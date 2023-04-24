@@ -35,31 +35,23 @@ module.exports = {
             },
             {
                 test: /\.(scss)$/,
-                use: [{
-                    // inject CSS to page
-                    loader: 'style-loader'
-                }, {
-                    // translates CSS into CommonJS modules
-                    loader: 'css-loader'
-                }, {
-                    // Run postcss actions
-                    loader: 'postcss-loader',
-                    options: {
-                        // `postcssOptions` is needed for postcss 8.x;
-                        // if you use postcss 7.x skip the key
-                        postcssOptions: {
-                            // postcss plugins, can be exported to postcss.config.js
-                            plugins: function () {
-                                return [
-                                    require('autoprefixer')
-                                ];
+                use: [
+                    { loader: 'style-loader' },
+                    { loader: 'css-loader' },
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            postcssOptions: {
+                                plugins: function () {
+                                    return [
+                                        require('autoprefixer')
+                                    ];
+                                }
                             }
                         }
-                    }
-                }, {
-                    // compiles Sass to CSS
-                    loader: 'sass-loader'
-                }]
+                    },
+                    { loader: 'sass-loader' }
+                ]
             },
             {
                 test: /\.(woff|woff2|eot|ttf|otf)$/i,
@@ -67,11 +59,11 @@ module.exports = {
             },
         ]
     },
-    //To be tested routing and refresh solutions as seen here:
-    //https://stackoverflow.com/questions/56919473/react-webpack-cant-redirect-all-my-routes-to-index-html
-    //https://stackoverflow.com/questions/27928372/react-router-urls-dont-work-when-refreshing-or-writing-manually
     devServer: {
-        historyApiFallback: true
+        historyApiFallback: true,
+        host: '0.0.0.0',
+        public: '10.101.2.95',
+        port: 8080,
     },
     plugins: [
         new HtmlWebpackPlugin({

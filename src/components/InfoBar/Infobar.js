@@ -1,4 +1,4 @@
-import "./InfoBar.scss";
+import "./Infobar.scss";
 
 const Infobar = ({ isExpanded, setIsExpanded }) => {
 

@@ -59,16 +59,12 @@ module.exports = {
             },
         ]
     },
-devServer: {
-    historyApiFallback: true,
-    host: '0.0.0.0',
-    port: 8080,
-    client: {
-        webSocketURL: {
-            hostname: '0.0.0.0',
-        },
+    devServer: {
+        historyApiFallback: true,
+        host: '0.0.0.0',
+        disableHostCheck: true,
+        port: 8080,
     },
-},
     plugins: [
         new HtmlWebpackPlugin({
             template: path.join(__dirname, "public", "index.html"),
